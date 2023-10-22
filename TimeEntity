@@ -1,0 +1,7 @@
+public class TimeEntity {
+  private String timeEntity
+  public TimeEntity(string timeEntity)
+  {
+    this.timeEntity = timeEntity;
+  }
+}
