@@ -1,0 +1,31 @@
+@Entity
+@Getter
+@NoArgsConstructor(access = PROTECTED)
+@ToString(of = {"id", "nickName", "gender"})
+public class UserProfile {
+    @Id
+    @GeneratedValue(strategy = IDENTITY)
+    @Column(name = "user_id")
+    private long id;
+
+    @Column(nullable = false)
+    private String nickName;
+
+    @Embedded
+    private Address address;
+
+    private String phoneNumber;
+
+    @Enumerated(STRING)
+    private Gender gender;
+
+    @OnetoOne(mappedBy = "userProfile", fetch = LAZY)
+    private User user;
+
+    private int age;
+
+    private String provider;
+    private String providerId;
+
+    private String imageUrl;
+}
