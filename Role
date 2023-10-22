@@ -1,0 +1,7 @@
+public class Role{
+  private String role;
+  public Role(string role)
+  {
+    this.role = role;
+  }
+}
